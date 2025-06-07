@@ -30,6 +30,8 @@
   width: 100%;
   padding: 10px 0;
   z-index: 100;
+  transition: max-height 0.4s ease-in-out;
+  overflow: hidden;
 }
 
 .nav-links li {
@@ -61,7 +63,7 @@ body {
   padding-left: 40px;
   padding-right: 20px;
   color: #000000;
-  font-family: 'Trebuchet Ms', sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
   font-size: 29px;
   line-height: 1.6;
 }
@@ -81,7 +83,7 @@ body::before {
   pointer-events: none;
 }
 
-/* Media query example */
+/* Responsive container margins */
 @media (max-width: 600px) {
   .container {
     margin: 2vw;
@@ -94,21 +96,31 @@ body::before {
   }
 }
 
-.service img {
-  width: 30%;
-  height: 200px;
-  object-fit: cover;
-}
-
+/* Services Section */
 .service {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.service img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service img:hover {
+  transform: scale(1.03);
 }
 
 .container {
   padding: 0 40px;
 }
 
+/* Unit registration form styling */
 #unit-registration {
   background: transparent;
   padding: 30px;
@@ -151,4 +163,5 @@ body::before {
   margin-top: 18px;
   border-radius: 6px;
 }
+
 
