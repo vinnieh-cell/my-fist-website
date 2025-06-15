@@ -104,7 +104,7 @@ img.airtel-logo {
 <body>
   <div class="content">
     <h2>Unit Registration Assistance</h2>
-    <p>For unit registration, please <strong>send Ksh 300 via Airtel Money</strong> which is the service fee to:</p>
+    <p>For unit registration, please <strong>send Ksh 200 via Airtel Money</strong> which is the service fee to:</p>
 
     <div class="payment-details">
       <strong>Airtel Number:</strong>
@@ -118,13 +118,43 @@ img.airtel-logo {
     </div>
 
     <p>After payment, fill out this form:</p>
+<form action="send.php" method="post">
 
-    <form id="registration-form">
+      <input type="hidden" name="_next" value="https://vincodex.com/thank-you.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://vincodex.com/thank-you.html">
+      <input type="hidden" name="_template" value="box">
       <label for="full-name">Full Name:</label>
       <input type="text" id="full-name" name="full-name" required>
 
-      <label for="university">University/College:</label>
-      <input type="text" id="university" name="university" required>
+    <form id="unit-registration" method="POST" action="submit.php">
+  <label for="full-name">Full Name:</label>
+  <input type="text" id="full-name" name="full-name" required>
+
+  <label for="university">University/College:</label>
+  <select id="university" name="university" required>
+    <option value="">-- Select Your University --</option>
+    <option value="University of Nairobi">University of Nairobi</option>
+    <option value="Kenyatta University">Kenyatta University</option>
+    <option value="Moi University">Moi University</option>
+    <option value="Egerton University">Egerton University</option>
+    <option value="JKUAT">JKUAT</option>
+    <option value="Maseno University">Maseno University</option>
+    <option value="MMUST">MMUST</option>
+    <option value="Technical University of Kenya">Technical University of Kenya</option>
+    <option value="Dedan Kimathi University">Dedan Kimathi University</option>
+    <option value="Pwani University">Pwani University</option>
+    <option value="Chuka University">Chuka University</option>
+    <option value="Meru University">Meru University</option>
+    <option value="Karatina University">Karatina University</option>
+    <option value="Multimedia University">Multimedia University</option>
+    <option value="SEKU">SEKU</option>
+    <option value="University of Eldoret">University of Eldoret</option>
+    <option value="Rongo University">Rongo University</option>
+    <option value="Laikipia University">Laikipia University</option>
+    <option value="Kibabii University">Kibabii University</option>
+    <option value="Tharaka University">Tharaka University</option>
+</select>
 
       <label for="portal-login">Student Portal Username/Email:</label>
       <input type="text" id="portal-login" name="portal-login" required>
