@@ -120,18 +120,18 @@ img.airtel-logo {
     </div>
 
     <p>After payment, fill out this form:</p>
-<form action="send.php" method="post">
 
-      <input type="hidden" name="_next" value="https://vincodex.com/thank-you.html">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://vincodex.com/thank-you.html">
-      <input type="hidden" name="_template" value="box">
-      <label for="full-name">Full Name:</label>
-      <input type="text" id="full-name" name="full-name" required>
 
     <form id="unit-registration" method="POST" action="submit.php">
+  <input type="hidden" name="_next" value="https://vincodex.com/thank-you.html">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="box">
+
   <label for="full-name">Full Name:</label>
   <input type="text" id="full-name" name="full-name" required>
+
+  <label for="units">Units to Register:</label>
+  <textarea id="units" name="units" rows="5" placeholder="e.g. UCU 112, BBA 102, APP 101" required></textarea>
 
   <label for="university">University/College:</label>
   <select id="university" name="university" required>
@@ -176,4 +176,3 @@ img.airtel-logo {
   </div>
 </body>
 </html>
-
